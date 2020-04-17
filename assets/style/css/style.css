@@ -22,7 +22,6 @@
 
 body {
   font-family: COCOGOOSE, lato, sans-serif;
-  position: absolute;
   color: #272a31;
   background-color: #f7f7f7;
   font-weight: 400;
@@ -32,6 +31,17 @@ body {
 q::before,
 q::after {
   content: '"';
+}
+
+i {
+  font-style: italic;
+}
+
+section h2:first-of-type {
+  padding: 1rem 0;
+  font-family: Lato, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 nav {
@@ -118,13 +128,6 @@ main .program {
   }
 }
 
-main .program h2 {
-  padding: 2rem 0;
-  font-family: Lato, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-
 main .program div.program-container {
   display: flex;
   flex-direction: column;
@@ -179,6 +182,83 @@ main .program button[type="button"] {
 
 @media screen and (min-width: 768px) {
   main .program button[type="button"] {
+    display: none;
+  }
+}
+
+main .speakers {
+  background: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+main .speakers .speaker-container {
+  display: grid;
+  grid-gap: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  main .speakers .speaker-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 1rem;
+  }
+}
+
+main .speakers .speaker-container article {
+  display: flex;
+  justify-content: space-between;
+  font-family: Lato, sans-serif;
+  align-items: flex-start;
+  text-align: left;
+}
+
+main .speakers .speaker-container article figure {
+  float: left;
+  margin: 0 1rem;
+  max-width: 300px;
+}
+
+main .speakers .speaker-container article figure img {
+  width: 100%;
+}
+
+main .speakers .speaker-container article figure::after {
+  content: "";
+  clear: left;
+}
+
+main .speakers .speaker-container article h6:first-of-type {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+}
+
+main .speakers .speaker-container article i {
+  color: #ff4f38;
+  font-size: 0.8rem;
+}
+
+main .speakers .speaker-container article p:first-of-type {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+main .speakers button[type="button"] {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 2rem auto;
+  text-transform: uppercase;
+}
+
+main .speakers button[type="button"] svg {
+  color: #ff4f38;
+}
+
+@media screen and (min-width: 768px) {
+  main .speakers button[type="button"] {
     display: none;
   }
 }
