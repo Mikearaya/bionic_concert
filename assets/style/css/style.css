@@ -341,15 +341,9 @@ main .speakers button[type="button"] svg {
   }
 }
 
-#about h2 {
-  font-weight: 700;
-}
-
 @media only screen and (min-width: 768px) {
   #about {
-    margin: auto;
     text-align: center;
-    max-width: 77%;
   }
 
   #about h1 {
@@ -357,6 +351,16 @@ main .speakers button[type="button"] svg {
     max-width: 60%;
     margin: auto;
   }
+
+  #about p {
+    max-width: 60%;
+    margin: auto;
+    display: block;
+  }
+}
+
+#about h2 {
+  font-weight: 700;
 }
 
 #about address {
@@ -387,10 +391,10 @@ main .speakers button[type="button"] svg {
 #about .history {
   background-color: #fff;
   font-family: Lato, sans-serif;
-  padding: 3rem;
+  padding: 0 2em;
   text-align: center;
   margin: auto;
-  max-width: 80%;
+  display: block;
 }
 
 #about .history .logo {
@@ -400,10 +404,20 @@ main .speakers button[type="button"] svg {
   margin-top: 1em;
   font-size: 4rem;
   box-shadow: 10px 10px 10px #ec5242;
+  transition: ease-in-out box-shadow 0.5s;
+}
+
+#about .history .logo:hover {
+  box-shadow: -10px -10px 10px #ec5242;
 }
 
 #about .history .logo svg {
   color: #ff4f38;
+}
+
+#about .past-event {
+  text-align: center;
+  background-color: #fff;
 }
 
 #about .past-event p {
@@ -416,6 +430,7 @@ main .speakers button[type="button"] svg {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
+  text-align: left;
   grid-template-rows: 200px;
   grid-row: 200px;
 }
@@ -439,9 +454,8 @@ main .speakers button[type="button"] svg {
   color: white;
   text-align: center;
   top: 4em;
-  left: 3em;
-  display: block;
-  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 #about .past-event .event-container div .caption h3 {

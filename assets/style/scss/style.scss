@@ -313,20 +313,24 @@ main {
 }
 
 #about {
-  h2 {
-    font-weight: 700;
-  }
-
   @include on-screen-type(tablet) {
-    margin: auto;
     text-align: center;
-    max-width: 77%;
 
     h1 {
       text-align: center;
       max-width: 60%;
       margin: auto;
     }
+
+    p {
+      max-width: 60%;
+      margin: auto;
+      display: block;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
   }
 
   address {
@@ -357,10 +361,10 @@ main {
   .history {
     background-color: $white;
     font-family: $text-font-family;
-    padding: 3rem;
+    padding: 0 2em;
     text-align: center;
     margin: auto;
-    max-width: 80%;
+    display: block;
 
     .logo {
       display: inline-flex;
@@ -369,6 +373,11 @@ main {
       margin-top: 1em;
       font-size: 4rem;
       box-shadow: 10px 10px 10px $higlight-color;
+      transition: ease-in-out box-shadow 0.5s;
+
+      &:hover {
+        box-shadow: -10px -10px 10px $higlight-color;
+      }
 
       svg {
         color: $site-orange;
@@ -377,6 +386,9 @@ main {
   }
 
   .past-event {
+    text-align: center;
+    background-color: $white;
+
     p {
       font-family: $text-font-family;
       font-size: 0.7rem;
@@ -387,6 +399,7 @@ main {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 1em;
+      text-align: left;
       grid-template-rows: 200px;
 
       @include on-screen-type(tablet) {
@@ -407,13 +420,13 @@ main {
           color: white;
           text-align: center;
           top: 4em;
-          left: 3em;
-          display: block;
-          margin: 0 auto;
+          left: 0;
+          right: 0;
 
           h3 {
             font-size: 1.5rem;
           }
+
           p {
             font-weight: 700;
             font-size: 0.8rem;
