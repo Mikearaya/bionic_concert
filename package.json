@@ -24,7 +24,10 @@
     "assets/**/*.css": [
       "npx stylelint --fix"
     ],
-    "**/**/*.html": [
+    "index.html": [
+      "npx html5v"
+    ],
+    "./pages about.html": [
       "npx html5v"
     ],
     "**/*.+(js|jsx|json|css|md|html)": [

@@ -10,6 +10,10 @@ i {
   font-style: italic;
 }
 
+.background-white {
+  background-color: $white;
+}
+
 section h2:first-of-type {
   padding: $top-margin 0;
   font-family: $text-font-family;
@@ -120,11 +124,71 @@ main {
   min-height: 600px;
   background-size: cover;
 
+  &#about {
+    @include on-screen-type(tablet) {
+      margin: auto;
+      text-align: center;
+      max-width: 77%;
+
+      h1 {
+        text-align: center;
+        max-width: 60%;
+        margin: auto;
+      }
+    }
+
+    address {
+      font-family: $text-font-family;
+      margin: 1em auto;
+      text-align: center;
+      max-width: 60%;
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.5;
+
+      a {
+        display: block;
+        color: #000;
+        font-weight: 500;
+
+        &:active {
+          color: $site-orange;
+        }
+
+        &:hover {
+          color: $site-orange;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .history {
+      background-color: $white;
+      font-family: $text-font-family;
+      padding: 3rem;
+      text-align: center;
+      margin: auto;
+      max-width: 80%;
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1em;
+        font-size: 4rem;
+        box-shadow: 10px 10px 10px $higlight-color;
+
+        svg {
+          color: $site-orange;
+        }
+      }
+    }
+  }
+
   .header {
     position: relative;
     text-align: left;
-    padding: 1.5rem 2rem 4rem;
-    top: 3rem;
+    padding: 1rem 2rem 4rem;
     opacity: 1;
 
     q {
@@ -167,7 +231,7 @@ main {
     }
   }
 
-  .program {
+  &#home .program {
     color: $white;
     text-align: center;
     background-image: url("../../images/sque-tile.png");
@@ -232,7 +296,7 @@ main {
     }
   }
 
-  .speakers {
+  &#home .speakers {
     background: $white;
     padding: 3rem 1rem;
     text-align: center;
