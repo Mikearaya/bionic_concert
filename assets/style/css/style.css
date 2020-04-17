@@ -145,67 +145,6 @@ main {
   background-size: cover;
 }
 
-@media only screen and (min-width: 768px) {
-  main#about {
-    margin: auto;
-    text-align: center;
-    max-width: 77%;
-  }
-
-  main#about h1 {
-    text-align: center;
-    max-width: 60%;
-    margin: auto;
-  }
-}
-
-main#about address {
-  font-family: Lato, sans-serif;
-  margin: 1em auto;
-  text-align: center;
-  max-width: 60%;
-  font-size: 0.8rem;
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-main#about address a {
-  display: block;
-  color: #000;
-  font-weight: 500;
-}
-
-main#about address a:active {
-  color: #ff4f38;
-}
-
-main#about address a:hover {
-  color: #ff4f38;
-  text-decoration: underline;
-}
-
-main#about .history {
-  background-color: #fff;
-  font-family: Lato, sans-serif;
-  padding: 3rem;
-  text-align: center;
-  margin: auto;
-  max-width: 80%;
-}
-
-main#about .history .logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1em;
-  font-size: 4rem;
-  box-shadow: 10px 10px 10px #ec5242;
-}
-
-main#about .history .logo svg {
-  color: #ff4f38;
-}
-
 main .header {
   position: relative;
   text-align: left;
@@ -252,7 +191,7 @@ main .header .location {
   font-size: 0.9rem;
 }
 
-main#home .program {
+main .program {
   color: #fff;
   text-align: center;
   background-image: url("../../images/sque-tile.png");
@@ -262,25 +201,25 @@ main#home .program {
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .program {
+  main .program {
     padding: 0 10rem 2rem;
   }
 }
 
-main#home .program div.program-container {
+main .program div.program-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .program div.program-container {
+  main .program div.program-container {
     flex-direction: row;
     justify-content: center;
   }
 }
 
-main#home .program div.program-container div {
+main .program div.program-container div {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -290,28 +229,28 @@ main#home .program div.program-container div {
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .program div.program-container div {
+  main .program div.program-container div {
     flex-direction: column;
     margin: 0.2rem;
   }
 }
 
-main#home .program div.program-container div h6 {
+main .program div.program-container div h6 {
   color: #ec5242;
   font-family: Lato, sans-serif;
   padding: 1rem;
 }
 
-main#home .program div.program-container div p {
+main .program div.program-container div p {
   font-family: Lato, sans-serif;
   text-align: center;
 }
 
-main#home .program div.program-container div:hover {
+main .program div.program-container div:hover {
   border: 1px solid #fff;
 }
 
-main#home .program button[type="button"] {
+main .program button[type="button"] {
   margin: 2rem 0;
   padding: 1.5rem 2.5rem;
   background-color: #ff4f38;
@@ -320,31 +259,31 @@ main#home .program button[type="button"] {
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .program button[type="button"] {
+  main .program button[type="button"] {
     display: none;
   }
 }
 
-main#home .speakers {
+main .speakers {
   background: #fff;
   padding: 3rem 1rem;
   text-align: center;
 }
 
-main#home .speakers .speaker-container {
+main .speakers .speaker-container {
   display: grid;
   grid-gap: 3rem;
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .speakers .speaker-container {
+  main .speakers .speaker-container {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 3rem;
     grid-column-gap: 1rem;
   }
 }
 
-main#home .speakers .speaker-container article {
+main .speakers .speaker-container article {
   display: flex;
   justify-content: space-between;
   font-family: Lato, sans-serif;
@@ -352,38 +291,38 @@ main#home .speakers .speaker-container article {
   text-align: left;
 }
 
-main#home .speakers .speaker-container article figure {
+main .speakers .speaker-container article figure {
   float: left;
   margin: 0 1rem;
   max-width: 300px;
 }
 
-main#home .speakers .speaker-container article figure img {
+main .speakers .speaker-container article figure img {
   width: 100%;
 }
 
-main#home .speakers .speaker-container article figure::after {
+main .speakers .speaker-container article figure::after {
   content: "";
   clear: left;
 }
 
-main#home .speakers .speaker-container article h6:first-of-type {
+main .speakers .speaker-container article h6:first-of-type {
   font-family: Lato, sans-serif;
   font-weight: 400;
 }
 
-main#home .speakers .speaker-container article i {
+main .speakers .speaker-container article i {
   color: #ff4f38;
   font-size: 0.8rem;
 }
 
-main#home .speakers .speaker-container article p:first-of-type {
+main .speakers .speaker-container article p:first-of-type {
   margin-top: 1rem;
   font-size: 0.8rem;
   line-height: 1.5;
 }
 
-main#home .speakers button[type="button"] {
+main .speakers button[type="button"] {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   width: 100%;
@@ -392,12 +331,136 @@ main#home .speakers button[type="button"] {
   text-transform: uppercase;
 }
 
-main#home .speakers button[type="button"] svg {
+main .speakers button[type="button"] svg {
   color: #ff4f38;
 }
 
 @media only screen and (min-width: 768px) {
-  main#home .speakers button[type="button"] {
+  main .speakers button[type="button"] {
     display: none;
   }
+}
+
+#about h2 {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  #about {
+    margin: auto;
+    text-align: center;
+    max-width: 77%;
+  }
+
+  #about h1 {
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+  }
+}
+
+#about address {
+  font-family: Lato, sans-serif;
+  margin: 1em auto;
+  text-align: center;
+  max-width: 60%;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+#about address a {
+  display: block;
+  color: #000;
+  font-weight: 500;
+}
+
+#about address a:active {
+  color: #ff4f38;
+}
+
+#about address a:hover {
+  color: #ff4f38;
+  text-decoration: underline;
+}
+
+#about .history {
+  background-color: #fff;
+  font-family: Lato, sans-serif;
+  padding: 3rem;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+}
+
+#about .history .logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 4rem;
+  box-shadow: 10px 10px 10px #ec5242;
+}
+
+#about .history .logo svg {
+  color: #ff4f38;
+}
+
+#about .past-event p {
+  font-family: Lato, sans-serif;
+  font-size: 0.7rem;
+}
+
+#about .past-event .event-container {
+  padding: 3em 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  grid-template-rows: 200px;
+  grid-row: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  #about .past-event .event-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3em 5em;
+  }
+}
+
+#about .past-event .event-container div {
+  background-color: #ff4f38;
+  position: relative;
+  cursor: pointer;
+}
+
+#about .past-event .event-container div .caption {
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  top: 4em;
+  left: 3em;
+  display: block;
+  margin: 0 auto;
+}
+
+#about .past-event .event-container div .caption h3 {
+  font-size: 1.5rem;
+}
+
+#about .past-event .event-container div .caption p {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+#about .past-event .event-container div img {
+  object-fit: cover;
+  opacity: 0.4;
+  width: 100%;
+  height: 200px;
+  transition: ease-in-out opacity 0.5s;
+}
+
+#about .past-event .event-container div img:hover {
+  opacity: 0;
 }

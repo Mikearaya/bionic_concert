@@ -124,67 +124,6 @@ main {
   min-height: 600px;
   background-size: cover;
 
-  &#about {
-    @include on-screen-type(tablet) {
-      margin: auto;
-      text-align: center;
-      max-width: 77%;
-
-      h1 {
-        text-align: center;
-        max-width: 60%;
-        margin: auto;
-      }
-    }
-
-    address {
-      font-family: $text-font-family;
-      margin: 1em auto;
-      text-align: center;
-      max-width: 60%;
-      font-size: 0.8rem;
-      font-weight: 300;
-      line-height: 1.5;
-
-      a {
-        display: block;
-        color: #000;
-        font-weight: 500;
-
-        &:active {
-          color: $site-orange;
-        }
-
-        &:hover {
-          color: $site-orange;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .history {
-      background-color: $white;
-      font-family: $text-font-family;
-      padding: 3rem;
-      text-align: center;
-      margin: auto;
-      max-width: 80%;
-
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1em;
-        font-size: 4rem;
-        box-shadow: 10px 10px 10px $higlight-color;
-
-        svg {
-          color: $site-orange;
-        }
-      }
-    }
-  }
-
   .header {
     position: relative;
     text-align: left;
@@ -231,7 +170,7 @@ main {
     }
   }
 
-  &#home .program {
+  .program {
     color: $white;
     text-align: center;
     background-image: url("../../images/sque-tile.png");
@@ -296,7 +235,7 @@ main {
     }
   }
 
-  &#home .speakers {
+  .speakers {
     background: $white;
     padding: 3rem 1rem;
     text-align: center;
@@ -368,6 +307,130 @@ main {
 
       @include on-screen-type(tablet) {
         display: none;
+      }
+    }
+  }
+}
+
+#about {
+  h2 {
+    font-weight: 700;
+  }
+
+  @include on-screen-type(tablet) {
+    margin: auto;
+    text-align: center;
+    max-width: 77%;
+
+    h1 {
+      text-align: center;
+      max-width: 60%;
+      margin: auto;
+    }
+  }
+
+  address {
+    font-family: $text-font-family;
+    margin: 1em auto;
+    text-align: center;
+    max-width: 60%;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    a {
+      display: block;
+      color: #000;
+      font-weight: 500;
+
+      &:active {
+        color: $site-orange;
+      }
+
+      &:hover {
+        color: $site-orange;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .history {
+    background-color: $white;
+    font-family: $text-font-family;
+    padding: 3rem;
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+      font-size: 4rem;
+      box-shadow: 10px 10px 10px $higlight-color;
+
+      svg {
+        color: $site-orange;
+      }
+    }
+  }
+
+  .past-event {
+    p {
+      font-family: $text-font-family;
+      font-size: 0.7rem;
+    }
+
+    .event-container {
+      padding: 3em 1em;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1em;
+      grid-template-rows: 200px;
+
+      @include on-screen-type(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3em 5em;
+      }
+
+      grid-row: 200px;
+
+      div {
+        background-color: $site-orange;
+        position: relative;
+        cursor: pointer;
+
+        .caption {
+          position: absolute;
+          background-color: transparent;
+          color: white;
+          text-align: center;
+          top: 4em;
+          left: 3em;
+          display: block;
+          margin: 0 auto;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-weight: 700;
+            font-size: 0.8rem;
+          }
+        }
+
+        img {
+          object-fit: cover;
+          opacity: 0.4;
+          width: 100%;
+          height: 200px;
+          transition: ease-in-out opacity 0.5s;
+
+          &:hover {
+            opacity: 0;
+          }
+        }
       }
     }
   }
