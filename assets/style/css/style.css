@@ -122,7 +122,7 @@ main .program {
   min-height: 200px;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .program {
     padding: 0 10rem 2rem;
   }
@@ -134,7 +134,7 @@ main .program div.program-container {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .program div.program-container {
     flex-direction: row;
     justify-content: center;
@@ -150,7 +150,7 @@ main .program div.program-container div {
   margin: 0.2rem 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .program div.program-container div {
     flex-direction: column;
     margin: 0.2rem;
@@ -180,7 +180,7 @@ main .program button[type="button"] {
   border: none;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .program button[type="button"] {
     display: none;
   }
@@ -197,7 +197,7 @@ main .speakers .speaker-container {
   grid-gap: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .speakers .speaker-container {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 3rem;
@@ -257,7 +257,7 @@ main .speakers button[type="button"] svg {
   color: #ff4f38;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main .speakers button[type="button"] {
     display: none;
   }

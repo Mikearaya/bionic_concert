@@ -1,45 +1,5 @@
-@import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
-
-$text-color: #272a31;
-$higlight-color: #ec5242;
-$site-orange: #ff4f38;
-$background-color: #f7f7f7;
-$font-family: COCOGOOSE, lato, sans-serif;
-$text-font-family: Lato, sans-serif;
-$top-margin: 1rem;
-$white: #fff;
-$light-background: #3c3f46;
-$grey-border: #e0e0e0;
-
-$breakpoint-desktop: 768px;
-
-@font-face {
-  font-family: "COCOGOOSE";
-  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
-  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
-      format("svg");
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $font-family;
-
-  color: $text-color;
-  background-color: $background-color;
-  font-weight: 400;
-  font-size: 16px;
-}
+@import "responsive";
+@import "base";
 
 q::before,
 q::after {
@@ -133,7 +93,7 @@ main {
     width: 100%;
     min-height: 200px;
 
-    @media screen and (min-width: $breakpoint-desktop) {
+    @include on-screen-type(tablet) {
       padding: 0 10rem 2rem;
     }
 
@@ -142,7 +102,7 @@ main {
       flex-direction: column;
       align-items: center;
 
-      @media screen and (min-width: $breakpoint-desktop) {
+      @include on-screen-type(tablet) {
         flex-direction: row;
         justify-content: center;
       }
@@ -155,7 +115,7 @@ main {
         background-color: $light-background;
         margin: 0.2rem $top-margin;
 
-        @media screen and (min-width: $breakpoint-desktop) {
+        @include on-screen-type(tablet) {
           flex-direction: column;
           margin: 0.2rem;
         }
@@ -184,7 +144,7 @@ main {
       color: white;
       border: none;
 
-      @media screen and (min-width: $breakpoint-desktop) {
+      @include on-screen-type(tablet) {
         display: none;
       }
     }
@@ -195,14 +155,14 @@ main {
     padding: 3rem 1rem;
     text-align: center;
 
-    @media screen and (min-width: $breakpoint-desktop) {
+    @include on-screen-type(tablet) {
     }
 
     .speaker-container {
       display: grid;
       grid-gap: 3rem;
 
-      @media screen and (min-width: $breakpoint-desktop) {
+      @include on-screen-type(tablet) {
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 3rem;
         grid-column-gap: 1rem;
@@ -260,7 +220,7 @@ main {
         color: $site-orange;
       }
 
-      @media screen and (min-width: $breakpoint-desktop) {
+      @include on-screen-type(tablet) {
         display: none;
       }
     }

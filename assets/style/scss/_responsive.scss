@@ -1,0 +1,13 @@
+@mixin on-screen-type($type) {
+  @if $type == tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $type == desktop {
+    @media only screen and (min-width: 1023px) {
+      @content;
+    }
+  }
+}
