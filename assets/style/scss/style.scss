@@ -2,11 +2,15 @@
 
 $text-color: #272a31;
 $higlight-color: #ec5242;
+$site-orange: #ff4f38;
 $background-color: #f7f7f7;
 $font-family: COCOGOOSE, lato, sans-serif;
 $text-font-family: Lato, sans-serif;
 $top-margin: 1rem;
 $white: #fff;
+$light-background: #3c3f46;
+
+$breakpoint-desktop: 768px;
 
 @font-face {
   font-family: "COCOGOOSE";
@@ -29,6 +33,7 @@ $white: #fff;
 
 body {
   font-family: $font-family;
+  position: absolute;
   color: $text-color;
   background-color: $background-color;
   font-weight: 400;
@@ -92,6 +97,7 @@ main {
       font-weight: 100;
       font-size: 0.9rem;
       line-height: 1.5;
+      display: inline-block;
     }
 
     time {
@@ -104,6 +110,78 @@ main {
       font-family: $text-font-family;
       font-weight: 300;
       font-size: 0.9rem;
+    }
+  }
+
+  .program {
+    color: $white;
+    text-align: center;
+    background-image: url("../../images/sque-tile.png");
+    background-repeat: repeat;
+    width: 100%;
+    min-height: 200px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      padding: 0 10rem 2rem;
+    }
+
+    h2 {
+      padding: $top-margin * 2 0;
+      font-family: $text-font-family;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    div.program-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: $light-background;
+        margin: 0.2rem $top-margin;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+          flex-direction: column;
+          margin: 0.2rem;
+        }
+
+        h6 {
+          color: $higlight-color;
+          font-family: $text-font-family;
+          padding: 1rem;
+        }
+
+        p {
+          font-family: $text-font-family;
+          text-align: center;
+        }
+
+        &:hover {
+          border: 1px solid $white;
+        }
+      }
+    }
+
+    button[type="button"] {
+      margin: 2rem 0;
+      padding: 1.5rem 2.5rem;
+      background-color: $site-orange;
+      color: white;
+      border: none;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        display: none;
+      }
     }
   }
 }

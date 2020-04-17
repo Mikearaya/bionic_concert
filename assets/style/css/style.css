@@ -22,6 +22,7 @@
 
 body {
   font-family: COCOGOOSE, lato, sans-serif;
+  position: absolute;
   color: #272a31;
   background-color: #f7f7f7;
   font-weight: 400;
@@ -87,6 +88,7 @@ main .header p {
   font-weight: 100;
   font-size: 0.9rem;
   line-height: 1.5;
+  display: inline-block;
 }
 
 main .header time {
@@ -99,4 +101,84 @@ main .header .location {
   font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+main .program {
+  color: #fff;
+  text-align: center;
+  background-image: url("../../images/sque-tile.png");
+  background-repeat: repeat;
+  width: 100%;
+  min-height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  main .program {
+    padding: 0 10rem 2rem;
+  }
+}
+
+main .program h2 {
+  padding: 2rem 0;
+  font-family: Lato, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+main .program div.program-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  main .program div.program-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+main .program div.program-container div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3c3f46;
+  margin: 0.2rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  main .program div.program-container div {
+    flex-direction: column;
+    margin: 0.2rem;
+  }
+}
+
+main .program div.program-container div h6 {
+  color: #ec5242;
+  font-family: Lato, sans-serif;
+  padding: 1rem;
+}
+
+main .program div.program-container div p {
+  font-family: Lato, sans-serif;
+  text-align: center;
+}
+
+main .program div.program-container div:hover {
+  border: 1px solid #fff;
+}
+
+main .program button[type="button"] {
+  margin: 2rem 0;
+  padding: 1.5rem 2.5rem;
+  background-color: #ff4f38;
+  color: white;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main .program button[type="button"] {
+    display: none;
+  }
 }
