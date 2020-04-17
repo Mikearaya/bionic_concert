@@ -25,3 +25,32 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+
+nav {
+  position: absolute;
+}
+
+nav .menu-button {
+  color: #636363;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+  font-size: 3rem;
+}
+
+nav div {
+  display: none;
+}
+
+main .cover {
+  width: 100%;
+  background-color: "d3d3d3";
+}
+
+main {
+  background-image: url("./../../images/main-background.jpeg");
+  width: 100%;
+  min-height: 600px;
+  opacity: 0.2;
+  background-size: cover;
+}

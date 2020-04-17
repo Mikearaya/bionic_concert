@@ -3,6 +3,7 @@
 $text-color: #272a31;
 $higlight-color: #ec5242;
 $background-color: "d3d3d3";
+$font-family: COCOGOOSE, lato, sans-serif;
 
 @font-face {
   font-family: "COCOGOOSE";
@@ -24,7 +25,38 @@ $background-color: "d3d3d3";
 }
 
 body {
-  font-family: COCOGOOSE, lato, sans-serif;
+  font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
+}
+
+nav {
+  position: absolute;
+
+  .menu-button {
+    color: #636363;
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+    font-size: 3rem;
+  }
+
+  div {
+    display: none;
+  }
+}
+
+main {
+  .cover {
+    width: 100%;
+    background-color: $background-color;
+  }
+
+  & {
+    background-image: url("./../../images/main-background.jpeg");
+    width: 100%;
+    min-height: 600px;
+    opacity: 0.2;
+    background-size: cover;
+  }
 }
