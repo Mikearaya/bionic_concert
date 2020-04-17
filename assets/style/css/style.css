@@ -22,12 +22,19 @@
 
 body {
   font-family: COCOGOOSE, lato, sans-serif;
+  color: #272a31;
+  background-color: #f7f7f7;
   font-weight: 400;
   font-size: 16px;
 }
 
+q::before,
+q::after {
+  content: '"';
+}
+
 nav {
-  position: absolute;
+  position: relative;
 }
 
 nav .menu-button {
@@ -42,15 +49,54 @@ nav div {
   display: none;
 }
 
-main .cover {
-  width: 100%;
-  background-color: "d3d3d3";
-}
-
 main {
-  background-image: url("./../../images/main-background.jpeg");
   width: 100%;
   min-height: 600px;
-  opacity: 0.2;
   background-size: cover;
+}
+
+main .header {
+  position: relative;
+  text-align: left;
+  padding: 1.5rem 2rem 4rem;
+  top: 3rem;
+  opacity: 1;
+}
+
+main .header q {
+  font-family: Lato, sans-serif;
+  color: #ec5242;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+main .header h1 {
+  margin-top: 1rem;
+  color: #ec5242;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+main .header p {
+  font-family: Lato, sans-serif;
+  margin-top: 2rem;
+  background-attachment: #f7f7f7;
+  border: 3px solid #fff;
+  padding: 1rem;
+  font-weight: 100;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+main .header time {
+  margin: 1.5rem 0 0.5rem;
+  display: block;
+  font-size: 1.5rem;
+}
+
+main .header .location {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
 }

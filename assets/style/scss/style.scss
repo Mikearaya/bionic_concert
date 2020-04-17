@@ -2,8 +2,11 @@
 
 $text-color: #272a31;
 $higlight-color: #ec5242;
-$background-color: "d3d3d3";
+$background-color: #f7f7f7;
 $font-family: COCOGOOSE, lato, sans-serif;
+$text-font-family: Lato, sans-serif;
+$top-margin: 1rem;
+$white: #fff;
 
 @font-face {
   font-family: "COCOGOOSE";
@@ -26,12 +29,19 @@ $font-family: COCOGOOSE, lato, sans-serif;
 
 body {
   font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
   font-weight: 400;
   font-size: 16px;
 }
 
+q::before,
+q::after {
+  content: '"';
+}
+
 nav {
-  position: absolute;
+  position: relative;
 
   .menu-button {
     color: #636363;
@@ -47,16 +57,53 @@ nav {
 }
 
 main {
-  .cover {
-    width: 100%;
-    background-color: $background-color;
-  }
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
 
-  & {
-    background-image: url("./../../images/main-background.jpeg");
-    width: 100%;
-    min-height: 600px;
-    opacity: 0.2;
-    background-size: cover;
+  .header {
+    position: relative;
+    text-align: left;
+    padding: 1.5rem 2rem 4rem;
+    top: 3rem;
+    opacity: 1;
+
+    q {
+      font-family: $text-font-family;
+      color: $higlight-color;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    h1 {
+      margin-top: 1rem;
+      color: $higlight-color;
+      font-weight: 400;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $text-font-family;
+      margin-top: $top-margin * 2;
+      background-attachment: $background-color;
+      border: 3px solid $white;
+      padding: 1rem;
+      font-weight: 100;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    time {
+      margin: $top-margin * 1.5 0 0.5rem;
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    .location {
+      font-family: $text-font-family;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
   }
 }
