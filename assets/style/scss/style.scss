@@ -197,6 +197,7 @@ main {
         justify-content: space-around;
         align-items: center;
         padding: 1rem 2rem;
+        min-height: 120px;
         background-color: $light-background;
         margin: 0.2rem $top-margin;
 
@@ -445,6 +446,111 @@ main {
           }
         }
       }
+    }
+  }
+}
+
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  display: block;
+}
+
+tr {
+  border: 1px solid #ccc;
+}
+
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+td {
+  border: none;
+  position: relative;
+  line-height: 2;
+  padding-left: 50%;
+}
+
+td:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+  background-color: $higlight-color;
+  color: $white;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+td:nth-of-type(1):before {
+  content: "Ticket Name";
+}
+
+td:nth-of-type(2):before {
+  content: "Price";
+}
+
+td:nth-of-type(3):before {
+  content: "Date";
+}
+
+td:nth-of-type(4):before {
+  content: "Quantity";
+}
+
+@include on-screen-type(tablet) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+
+    thead,
+    tbody {
+      display: table-header-group;
+
+      tr {
+        position: static;
+        display: table-row;
+      }
+    }
+
+    th,
+    td {
+      display: table-cell;
+      padding: 6px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background: $higlight-color;
+      color: white;
+      font-weight: 700;
+    }
+
+    td:nth-of-type(1):before {
+      content: "";
+    }
+
+    td:nth-of-type(2):before {
+      content: "";
+    }
+
+    td:nth-of-type(3):before {
+      content: "";
+    }
+
+    td:nth-of-type(4):before {
+      content: "";
     }
   }
 }

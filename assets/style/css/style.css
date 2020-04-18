@@ -3,7 +3,17 @@
 @font-face {
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
-  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff") format("woff"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE") format("svg");
+  src:
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
+    format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
+    format("woff2"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
+    format("woff"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
+    format("truetype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
+    format("svg");
 }
 
 * {
@@ -224,6 +234,7 @@ main .program div.program-container div {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
+  min-height: 120px;
   background-color: #3c3f46;
   margin: 0.2rem 1rem;
 }
@@ -477,4 +488,110 @@ main .speakers button[type="button"] svg {
 
 #about .past-event .event-container div img:hover {
   opacity: 0;
+}
+
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  display: block;
+}
+
+tr {
+  border: 1px solid #ccc;
+}
+
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+td {
+  border: none;
+  position: relative;
+  line-height: 2;
+  padding-left: 50%;
+}
+
+td::before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+  background-color: #ec5242;
+  color: #fff;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+td:nth-of-type(1)::before {
+  content: "Ticket Name";
+}
+
+td:nth-of-type(2)::before {
+  content: "Price";
+}
+
+td:nth-of-type(3)::before {
+  content: "Date";
+}
+
+td:nth-of-type(4)::before {
+  content: "Quantity";
+}
+
+@media only screen and (min-width: 768px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+  }
+
+  table thead,
+  table tbody {
+    display: table-header-group;
+  }
+
+  table thead tr,
+  table tbody tr {
+    position: static;
+    display: table-row;
+  }
+
+  table th,
+  table td {
+    display: table-cell;
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  table th {
+    background: #ec5242;
+    color: white;
+    font-weight: 700;
+  }
+
+  table td:nth-of-type(1)::before {
+    content: "";
+  }
+
+  table td:nth-of-type(2)::before {
+    content: "";
+  }
+
+  table td:nth-of-type(3)::before {
+    content: "";
+  }
+
+  table td:nth-of-type(4)::before {
+    content: "";
+  }
 }
