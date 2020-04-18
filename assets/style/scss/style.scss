@@ -119,9 +119,42 @@ nav {
   }
 }
 
+footer {
+  padding: 2em 1em;
+  font-family: $text-font-family;
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  color: #000;
+  min-height: 150px;
+
+  a {
+    color: $site-orange;
+    font-size: 1rem;
+    text-align: center;
+    svg {
+      font-size: 4rem !important;
+    }
+  }
+
+  div {
+    text-align: center;
+  }
+
+  @include on-screen-type(tablet) {
+    background-color: $light-background;
+
+    color: $white;
+
+    a {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+}
+
 main {
   width: 100%;
-  min-height: 600px;
   background-size: cover;
   margin-top: 1em;
 

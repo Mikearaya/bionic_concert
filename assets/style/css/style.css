@@ -139,9 +139,44 @@ nav div {
   }
 }
 
+footer {
+  padding: 2em 1em;
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  color: #000;
+  min-height: 150px;
+}
+
+footer a {
+  color: #ff4f38;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer a svg {
+  font-size: 4rem !important;
+}
+
+footer div {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    background-color: #3c3f46;
+    color: #fff;
+  }
+
+  footer a {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
 main {
   width: 100%;
-  min-height: 600px;
   background-size: cover;
   margin-top: 1em;
 }
