@@ -123,10 +123,19 @@ main {
   width: 100%;
   min-height: 600px;
   background-size: cover;
+  margin-top: 1em;
+
+  h1 {
+    text-align: center;
+    margin: auto;
+    @include on-screen-type(tablet) {
+      max-width: 60%;
+    }
+  }
 
   .header {
     position: relative;
-    text-align: left;
+    text-align: center;
     padding: 1rem 2rem 4rem;
     opacity: 1;
 
@@ -167,6 +176,35 @@ main {
       font-family: $text-font-family;
       font-weight: 300;
       font-size: 0.9rem;
+    }
+  }
+
+  .partners {
+    background-color: $light-background;
+    background-image: url("../../images/sque-tile.png");
+    background-repeat: repeat;
+    color: $white;
+
+    .partners-container {
+      margin-top: 2em;
+      padding: 0 2em 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      text-align: center;
+      font-family: $text-font-family;
+      font-weight: 900;
+
+      div {
+        max-width: 400px;
+        min-width: 200px;
+
+        svg {
+          font-size: 3rem;
+          color: $site-orange;
+        }
+      }
     }
   }
 
@@ -268,6 +306,12 @@ main {
 
           img {
             width: 100%;
+            transform: rotate(-10deg);
+            transition: ease-in transform 0.5s;
+
+            &:hover {
+              transform: rotate(0deg);
+            }
           }
 
           &::after {
@@ -316,12 +360,6 @@ main {
 #about {
   @include on-screen-type(tablet) {
     text-align: center;
-
-    h1 {
-      text-align: center;
-      max-width: 60%;
-      margin: auto;
-    }
 
     p {
       max-width: 60%;
@@ -450,107 +488,135 @@ main {
   }
 }
 
-table,
-thead,
-tbody,
-th,
-td,
-tr {
-  display: block;
-}
-
-tr {
-  border: 1px solid #ccc;
-}
-
-thead tr {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-td {
-  border: none;
-  position: relative;
-  line-height: 2;
-  padding-left: 50%;
-}
-
-td:before {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 45%;
-  padding-right: 10px;
-  white-space: nowrap;
-  background-color: $higlight-color;
-  color: $white;
-}
-
-tr:nth-of-type(odd) {
-  background: #eee;
-}
-
-td:nth-of-type(1):before {
-  content: "Ticket Name";
-}
-
-td:nth-of-type(2):before {
-  content: "Price";
-}
-
-td:nth-of-type(3):before {
-  content: "Date";
-}
-
-td:nth-of-type(4):before {
-  content: "Quantity";
-}
-
-@include on-screen-type(tablet) {
+#ticket {
   table {
     width: 100%;
     border-collapse: collapse;
-    display: table;
+    margin-top: 2em;
+    text-align: left;
+  }
 
-    thead,
-    tbody {
-      display: table-header-group;
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-      tr {
-        position: static;
-        display: table-row;
-      }
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    line-height: 2;
+    padding-left: 50%;
+
+    input {
+      line-height: 2;
     }
+  }
 
-    th,
-    td {
-      display: table-cell;
-      padding: 6px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    background-color: $higlight-color;
+    color: $white;
+  }
 
-    th {
-      background: $higlight-color;
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+
+  td:nth-of-type(1):before {
+    content: "Ticket Name";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Price";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Date";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Quantity";
+  }
+
+  .ticket-selection {
+    background-color: $white;
+    button[type="button"] {
+      margin: 2rem 0;
+      padding: 1.5rem 2.5rem;
+      background-color: $site-orange;
       color: white;
+      border: none;
+      text-transform: uppercase;
       font-weight: 700;
     }
+  }
 
-    td:nth-of-type(1):before {
-      content: "";
+  @include on-screen-type(tablet) {
+    .ticket-selection {
+      max-width: 70%;
+      margin: auto;
     }
 
-    td:nth-of-type(2):before {
-      content: "";
-    }
+    table {
+      display: table;
+      thead,
+      tbody {
+        display: table-header-group;
 
-    td:nth-of-type(3):before {
-      content: "";
-    }
+        tr {
+          position: static;
+          display: table-row;
+        }
+      }
 
-    td:nth-of-type(4):before {
-      content: "";
+      th,
+      td {
+        display: table-cell;
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+
+      th {
+        background: $higlight-color;
+        color: white;
+        font-weight: 700;
+      }
+
+      td:nth-of-type(1):before {
+        content: "";
+      }
+
+      td:nth-of-type(2):before {
+        content: "";
+      }
+
+      td:nth-of-type(3):before {
+        content: "";
+      }
+
+      td:nth-of-type(4):before {
+        content: "";
+      }
     }
   }
 }
