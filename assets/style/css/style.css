@@ -247,11 +247,11 @@ footer {
   min-height: 150px;
 }
 
-footer a[href="#"] {
+footer a[href*="index.html"] {
   color: #ff4f38;
 }
 
-footer a[href="#"] svg {
+footer a[href*="index.html"] svg {
   font-size: 4rem !important;
 }
 
