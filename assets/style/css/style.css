@@ -3,7 +3,17 @@
 @font-face {
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
-  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff") format("woff"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE") format("svg");
+  src:
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
+    format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
+    format("woff2"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
+    format("woff"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
+    format("truetype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
+    format("svg");
 }
 
 * {
@@ -258,6 +268,10 @@ main .header p {
   font-size: 0.9rem;
   line-height: 1.5;
   display: inline-block;
+}
+
+main .header .large-text {
+  font-size: 3em;
 }
 
 main .header time {

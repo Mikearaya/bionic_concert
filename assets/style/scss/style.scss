@@ -230,6 +230,10 @@ main {
       display: inline-block;
     }
 
+    .large-text {
+      font-size: 3em;
+    }
+
     time {
       margin: $margin * 1.5 0 0.5rem;
       display: block;
