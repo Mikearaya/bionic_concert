@@ -23,11 +23,29 @@ button[type="button"] {
   font-weight: 700;
 }
 
-section h2:first-of-type {
-  padding: $top-margin 0;
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0 1.5em;
+  font-size: 1.6rem;
   font-family: $text-font-family;
-  font-size: 1.1rem;
   font-weight: 400;
+
+  &::before {
+    content: "";
+
+    position: relative;
+    top: 40px;
+    display: block;
+    background: $site-orange;
+    width: 60px;
+    height: 2px;
+    margin: -1px auto;
+  }
+
+  @include on-screen-type(tablet) {
+    max-width: 60%;
+  }
 }
 
 nav {
@@ -153,7 +171,6 @@ footer {
 
   @include on-screen-type(tablet) {
     background-color: $light-background;
-
     color: $white;
 
     a {
@@ -167,14 +184,6 @@ main {
   width: 100%;
   background-size: cover;
   margin-top: 1em;
-
-  h1 {
-    text-align: center;
-    margin: auto;
-    @include on-screen-type(tablet) {
-      max-width: 60%;
-    }
-  }
 
   .header {
     position: relative;
@@ -242,10 +251,15 @@ main {
       div {
         max-width: 400px;
         min-width: 200px;
+        font-size: 2rem;
+        padding: 1em;
 
         svg {
-          font-size: 3rem;
           color: $site-orange;
+          font-size: 3rem;
+        }
+        span {
+          display: block;
         }
       }
     }
@@ -263,10 +277,11 @@ main {
       padding: 0 10rem 2rem;
     }
 
-    div.program-container {
+    .program-container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 2em;
 
       @include on-screen-type(tablet) {
         flex-direction: row;
@@ -277,14 +292,20 @@ main {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 1rem 2rem;
-        min-height: 120px;
         background-color: $light-background;
+        width: 100%;
+        padding: 1em;
         margin: 0.2rem $top-margin;
+        min-width: 150px;
+
+        svg {
+          font-size: 2rem;
+        }
 
         @include on-screen-type(tablet) {
           flex-direction: column;
           margin: 0.2rem;
+          min-height: 200px;
         }
 
         h6 {
@@ -326,6 +347,7 @@ main {
 
     .speaker-container {
       display: grid;
+      margin-top: 1em;
       grid-gap: 3rem;
 
       @include on-screen-type(tablet) {
@@ -402,7 +424,7 @@ main {
 #schedule {
   .schedule-table {
     text-align: center;
-    max-width: 900px;
+    max-width: 700px;
     background-color: $white;
     margin: auto;
   }
@@ -411,7 +433,7 @@ main {
     margin-top: 3em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 3em;
+    grid-row-gap: 3em;
 
     @include on-screen-type(tablet) {
       grid-template-columns: 0.5fr 1fr;
@@ -429,6 +451,7 @@ main {
       figure {
         figcaption {
           float: left;
+          margin-left: 1em;
         }
 
         figcaption::after {
@@ -438,8 +461,9 @@ main {
 
         img {
           float: left;
-          border-radius: 50%;
-          width: 95px;
+          border-radius: 10%;
+          width: 150px;
+          object-fit: cover;
         }
       }
     }

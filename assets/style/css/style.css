@@ -16,6 +16,9 @@ body {
   background-color: #f7f7f7;
   font-weight: 400;
   font-size: 16px;
+  background-image: url("../../images/main-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 q::before,
@@ -40,11 +43,30 @@ button[type="button"] {
   font-weight: 700;
 }
 
-section h2:first-of-type {
-  padding: 1rem 0;
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0 1.5em;
+  font-size: 1.6rem;
   font-family: Lato, sans-serif;
-  font-size: 1.1rem;
   font-weight: 400;
+}
+
+h2::before {
+  content: "";
+  position: relative;
+  top: 40px;
+  display: block;
+  background: #ff4f38;
+  width: 60px;
+  height: 2px;
+  margin: -1px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    max-width: 60%;
+  }
 }
 
 nav {
@@ -191,17 +213,6 @@ main {
   margin-top: 1em;
 }
 
-main h1 {
-  text-align: center;
-  margin: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  main h1 {
-    max-width: 60%;
-  }
-}
-
 main .header {
   position: relative;
   text-align: center;
@@ -270,11 +281,17 @@ main .partners .partners-container {
 main .partners .partners-container div {
   max-width: 400px;
   min-width: 200px;
+  font-size: 2rem;
+  padding: 1em;
 }
 
 main .partners .partners-container div svg {
-  font-size: 3rem;
   color: #ff4f38;
+  font-size: 3rem;
+}
+
+main .partners .partners-container div span {
+  display: block;
 }
 
 main .program {
@@ -292,48 +309,55 @@ main .program {
   }
 }
 
-main .program div.program-container {
+main .program .program-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2em;
 }
 
 @media only screen and (min-width: 768px) {
-  main .program div.program-container {
+  main .program .program-container {
     flex-direction: row;
     justify-content: center;
   }
 }
 
-main .program div.program-container div {
+main .program .program-container div {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 2rem;
-  min-height: 120px;
   background-color: #3c3f46;
+  width: 100%;
+  padding: 1em;
   margin: 0.2rem 1rem;
+  min-width: 150px;
+}
+
+main .program .program-container div svg {
+  font-size: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
-  main .program div.program-container div {
+  main .program .program-container div {
     flex-direction: column;
     margin: 0.2rem;
+    min-height: 200px;
   }
 }
 
-main .program div.program-container div h6 {
+main .program .program-container div h6 {
   color: #ec5242;
   font-family: Lato, sans-serif;
   padding: 1rem;
 }
 
-main .program div.program-container div p {
+main .program .program-container div p {
   font-family: Lato, sans-serif;
   text-align: center;
 }
 
-main .program div.program-container div:hover {
+main .program .program-container div:hover {
   border: 1px solid #fff;
 }
 
@@ -358,6 +382,7 @@ main .speakers {
 
 main .speakers .speaker-container {
   display: grid;
+  margin-top: 1em;
   grid-gap: 3rem;
 }
 
@@ -435,7 +460,7 @@ main .speakers button[type="button"] svg {
 
 #schedule .schedule-table {
   text-align: center;
-  max-width: 900px;
+  max-width: 700px;
   background-color: #fff;
   margin: auto;
 }
@@ -444,7 +469,7 @@ main .speakers button[type="button"] svg {
   margin-top: 3em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3em;
+  grid-row-gap: 3em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -466,6 +491,7 @@ main .speakers button[type="button"] svg {
 
 #schedule .schedule-grid .task figure figcaption {
   float: left;
+  margin-left: 1em;
 }
 
 #schedule .schedule-grid .task figure figcaption::after {
@@ -475,8 +501,9 @@ main .speakers button[type="button"] svg {
 
 #schedule .schedule-grid .task figure img {
   float: left;
-  border-radius: 50%;
-  width: 95px;
+  border-radius: 10%;
+  width: 150px;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 768px) {
