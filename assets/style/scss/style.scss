@@ -23,6 +23,27 @@ button[type="button"] {
   font-weight: 700;
 }
 
+.shallow-button {
+  color: $site-orange;
+  border: 3px solid $site-orange;
+  background-color: $white;
+  padding: 1em 0.5em;
+  text-decoration: none;
+  &:hover {
+    color: $white;
+    background-color: $site-orange;
+  }
+}
+
+a[href*="index.html"].shallow-button {
+  border: none;
+
+  &:hover {
+    color: $light-background;
+    background-color: $white;
+  }
+}
+
 h2 {
   text-align: center;
   margin: 0 auto;
@@ -133,13 +154,6 @@ nav {
         .left-nav {
           display: flex;
           align-self: baseline;
-
-          button[type="button"] {
-            color: $site-orange;
-            border: 3px solid $site-orange;
-            background-color: $white;
-            padding: 1em 0.5em;
-          }
         }
       }
     }
@@ -158,8 +172,6 @@ footer {
 
   a {
     color: $site-orange;
-    font-size: 1rem;
-    text-align: center;
     svg {
       font-size: 4rem !important;
     }
@@ -183,7 +195,7 @@ footer {
 main {
   width: 100%;
   background-size: cover;
-  margin-top: 1em;
+  margin-top: $margin;
 
   .header {
     position: relative;
@@ -208,7 +220,7 @@ main {
 
     p {
       font-family: $text-font-family;
-      margin-top: $top-margin * 2;
+      margin-top: $margin * 2;
       background-attachment: $background-color;
       border: 3px solid $white;
       padding: 1rem;
@@ -219,7 +231,7 @@ main {
     }
 
     time {
-      margin: $top-margin * 1.5 0 0.5rem;
+      margin: $margin * 1.5 0 0.5rem;
       display: block;
       font-size: 1.5rem;
     }
@@ -295,7 +307,7 @@ main {
         background-color: $light-background;
         width: 100%;
         padding: 1em;
-        margin: 0.2rem $top-margin;
+        margin: 0.2rem $margin;
         min-width: 150px;
 
         svg {
@@ -436,7 +448,7 @@ main {
     grid-row-gap: 3em;
 
     @include on-screen-type(tablet) {
-      grid-template-columns: 0.5fr 1fr;
+      grid-template-columns: 0.6fr 1fr;
     }
 
     .task {

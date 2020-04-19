@@ -43,6 +43,28 @@ button[type="button"] {
   font-weight: 700;
 }
 
+.shallow-button {
+  color: #ff4f38;
+  border: 3px solid #ff4f38;
+  background-color: #fff;
+  padding: 1em 0.5em;
+  text-decoration: none;
+}
+
+.shallow-button:hover {
+  color: #fff;
+  background-color: #ff4f38;
+}
+
+a[href*="index.html"].shallow-button {
+  border: none;
+}
+
+a[href*="index.html"].shallow-button:hover {
+  color: #3c3f46;
+  background-color: #fff;
+}
+
 h2 {
   text-align: center;
   margin: 0 auto;
@@ -161,13 +183,6 @@ nav div {
     display: flex;
     align-self: baseline;
   }
-
-  nav div.bottom-nav .left-nav button[type="button"] {
-    color: #ff4f38;
-    border: 3px solid #ff4f38;
-    background-color: #fff;
-    padding: 1em 0.5em;
-  }
 }
 
 footer {
@@ -183,8 +198,6 @@ footer {
 
 footer a {
   color: #ff4f38;
-  font-size: 1rem;
-  text-align: center;
 }
 
 footer a svg {
@@ -210,7 +223,7 @@ footer div {
 main {
   width: 100%;
   background-size: cover;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 main .header {
@@ -474,7 +487,7 @@ main .speakers button[type="button"] svg {
 
 @media only screen and (min-width: 768px) {
   #schedule .schedule-grid {
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 
