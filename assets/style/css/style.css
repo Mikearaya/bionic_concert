@@ -31,6 +31,15 @@ i {
   background-color: #fff;
 }
 
+button[type="button"] {
+  padding: 1.5rem 2.5rem;
+  background-color: #ff4f38;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 section h2:first-of-type {
   padding: 1rem 0;
   font-family: Lato, sans-serif;
@@ -144,6 +153,7 @@ footer {
   font-family: Lato, sans-serif;
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
   background-color: #fff;
   color: #000;
   min-height: 150px;
@@ -328,7 +338,6 @@ main .program div.program-container div:hover {
 }
 
 main .program button[type="button"] {
-  margin: 2rem 0;
   padding: 1.5rem 2.5rem;
   background-color: #ff4f38;
   color: white;
@@ -422,6 +431,52 @@ main .speakers button[type="button"] svg {
   main .speakers button[type="button"] {
     display: none;
   }
+}
+
+#schedule .schedule-table {
+  text-align: center;
+  max-width: 900px;
+  background-color: #fff;
+  margin: auto;
+}
+
+#schedule .schedule-grid {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3em;
+}
+
+@media only screen and (min-width: 768px) {
+  #schedule .schedule-grid {
+    grid-template-columns: 0.5fr 1fr;
+  }
+}
+
+#schedule .schedule-grid .task {
+  background-color: #edf0f5;
+  padding: 2em 1em;
+}
+
+#schedule .schedule-grid .task article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#schedule .schedule-grid .task figure figcaption {
+  float: left;
+}
+
+#schedule .schedule-grid .task figure figcaption::after {
+  content: "";
+  clear: left;
+}
+
+#schedule .schedule-grid .task figure img {
+  float: left;
+  border-radius: 50%;
+  width: 95px;
 }
 
 @media only screen and (min-width: 768px) {
