@@ -69,15 +69,64 @@ h2 {
   }
 }
 
+@keyframes example {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.animate {
+  display: none;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      padding: 2em;
+      border: 1px solid $site-orange;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    a {
+      color: $site-orange;
+    }
+  }
+}
+input[type="checkbox"]:checked {
+  + .animate {
+    display: block;
+    z-index: 9999999;
+    width: 50%;
+    background-color: $light-background;
+    animation-name: example;
+    animation-duration: 2s;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 nav {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 8888;
 
   .menu-button {
     color: #636363;
     position: relative;
     top: 1rem;
+    display: block;
     left: 2rem;
     font-size: 3rem;
+    &:hover {
+      cursor: pointer;
+    }
 
     @include on-screen-type(tablet) {
       display: none;
@@ -170,7 +219,7 @@ footer {
   color: #000;
   min-height: 150px;
 
-  a {
+  a[href="#"] {
     color: $site-orange;
     svg {
       font-size: 4rem !important;

@@ -3,17 +3,7 @@
 @font-face {
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
-  src:
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
-    format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
-    format("woff2"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
-    format("woff"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
-    format("truetype"),
-    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
-    format("svg");
+  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff") format("woff"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE") format("svg");
 }
 
 * {
@@ -101,16 +91,67 @@ h2::before {
   }
 }
 
+@keyframes example {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.animate {
+  display: none;
+}
+
+.animate ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.animate ul li {
+  padding: 2em;
+  border: 1px solid #ff4f38;
+}
+
+.animate ul li:hover {
+  background-color: #fff;
+}
+
+.animate ul a {
+  color: #ff4f38;
+}
+
+input[type="checkbox"]:checked + .animate {
+  display: block;
+  z-index: 9999999;
+  width: 50%;
+  background-color: #3c3f46;
+  animation-name: example;
+  animation-duration: 2s;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 nav {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 8888;
 }
 
 nav .menu-button {
   color: #636363;
   position: relative;
   top: 1rem;
+  display: block;
   left: 2rem;
   font-size: 3rem;
+}
+
+nav .menu-button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -206,11 +247,11 @@ footer {
   min-height: 150px;
 }
 
-footer a {
+footer a[href="#"] {
   color: #ff4f38;
 }
 
-footer a svg {
+footer a[href="#"] svg {
   font-size: 4rem !important;
 }
 
