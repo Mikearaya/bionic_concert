@@ -6,6 +6,10 @@ q::after {
   content: '"';
 }
 
+.hidden {
+  display: none;
+}
+
 i {
   font-style: italic;
 }
@@ -116,6 +120,10 @@ nav {
   position: sticky;
   top: 0;
   z-index: 8888;
+
+  @include on-screen-type(tablet) {
+    position: static;
+  }
 
   .menu-button {
     color: #636363;
