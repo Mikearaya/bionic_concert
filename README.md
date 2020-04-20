@@ -36,7 +36,7 @@ the website pages are categoriezed into 4 sections
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/Mikearaya/bionic_concert/20e932b7ec064ac08b63b248d901037b9f13dd0b/index.html)
+[Live Demo Link](https://mikearaya.github.io/bionic_concert)
 
 ## Getting Started
 
