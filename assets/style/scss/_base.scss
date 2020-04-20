@@ -1,0 +1,48 @@
+@import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
+
+$text-color: #272a31;
+$higlight-color: #ec5242;
+$site-orange: #ff4f38;
+$background-color: #f7f7f7;
+$font-family: COCOGOOSE, lato, sans-serif;
+$text-font-family: Lato, sans-serif;
+$margin: 1rem;
+$padding: 1em;
+
+$white: #fff;
+$light-background: #3c3f46;
+$grey-border: #d3d3d3;
+
+$breakpoint-desktop: 768px;
+
+@font-face {
+  font-family: "COCOGOOSE";
+  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
+  /* stylelint-disable */
+  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
+      /* stylelint-enable */ format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
+      format("svg");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+  font-weight: 400;
+  font-size: 16px;
+  background-image: url("../../images/main-background.png");
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-size: cover;
+}

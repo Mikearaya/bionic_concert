@@ -1,0 +1,817 @@
+@import "responsive";
+@import "base";
+
+q::before,
+q::after {
+  content: '"';
+}
+
+.hidden {
+  display: none;
+}
+
+i {
+  font-style: italic;
+}
+
+.background-white {
+  background-color: $white;
+}
+
+button[type="button"] {
+  padding: 1.5rem 2.5rem;
+  background-color: $site-orange;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.shallow-button {
+  color: $site-orange;
+  border: 3px solid $site-orange;
+  padding: 1em 0.5em;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background-color: $site-orange;
+  }
+}
+
+a[href*="index.html"].shallow-button {
+  border: none;
+
+  &:hover {
+    color: $light-background;
+    background-color: $white;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0 1.5em;
+  font-size: 1.6rem;
+  font-family: $text-font-family;
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 40px;
+    display: block;
+    background: $site-orange;
+    width: 60px;
+    height: 2px;
+    margin: -1px auto;
+  }
+
+  @include on-screen-type(tablet) {
+    max-width: 60%;
+  }
+}
+
+@keyframes example {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.animate {
+  display: none;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      padding: 2em;
+      border: 1px solid $site-orange;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    a {
+      color: $site-orange;
+    }
+  }
+}
+
+input[type="checkbox"]:checked {
+  + .animate {
+    display: block;
+    z-index: 9999999;
+    width: 50%;
+    background-color: $light-background;
+    animation-name: example;
+    animation-duration: 2s;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 8888;
+  background: $background-color;
+  min-height: 3em;
+
+  @include on-screen-type(tablet) {
+    position: static;
+    background-color: transparent;
+  }
+
+  .menu-button {
+    color: #636363;
+    position: relative;
+    top: 0.5rem;
+    display: block;
+    left: 1.5rem;
+    font-size: 2.5rem;
+
+    svg {
+      cursor: pointer;
+    }
+
+    @include on-screen-type(tablet) {
+      display: none;
+    }
+  }
+
+  div {
+    display: none;
+
+    @include on-screen-type(tablet) {
+      display: block;
+
+      &.top-links {
+        ul {
+          background-color: #000;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 5em;
+
+          li {
+            font-family: $text-font-family;
+            padding: 0.5em 1em;
+
+            a {
+              color: $white;
+              text-decoration: none;
+
+              &:active {
+                color: $site-orange;
+              }
+
+              &:hover {
+                color: $site-orange;
+              }
+            }
+          }
+        }
+      }
+
+      &.bottom-nav {
+        min-height: 10em;
+        display: flex;
+        justify-content: space-around;
+        padding: 1em 2rem;
+
+        svg {
+          font-size: 3rem;
+        }
+
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 5em;
+
+          li {
+            font-family: $text-font-family;
+            padding: 0.5em 1em;
+
+            a:first-of-type {
+              color: #000;
+              text-decoration: none;
+
+              &:active {
+                color: $site-orange;
+              }
+
+              &:hover {
+                color: $site-orange;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        .left-nav {
+          display: flex;
+          align-self: baseline;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 2em 1em;
+  font-family: $text-font-family;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: $white;
+  color: #000;
+  min-height: 150px;
+
+  a[href*="index.html"] {
+    color: $site-orange;
+
+    svg {
+      font-size: 4rem !important;
+    }
+  }
+
+  div {
+    text-align: center;
+  }
+
+  @include on-screen-type(tablet) {
+    background-color: $light-background;
+    color: $white;
+
+    a {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  background-size: cover;
+  margin-top: $margin;
+
+  .header {
+    position: relative;
+    text-align: center;
+    padding: 1rem 2rem 4rem;
+    opacity: 1;
+
+    q {
+      font-family: $text-font-family;
+      color: $higlight-color;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    h1 {
+      margin-top: 1rem;
+      color: $higlight-color;
+      font-weight: 400;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $text-font-family;
+      margin-top: $margin * 2;
+      background-attachment: $background-color;
+      border: 3px solid $white;
+      padding: 1rem;
+      font-weight: 100;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: inline-block;
+    }
+
+    .large-text {
+      font-size: 3em;
+    }
+
+    time {
+      margin: $margin * 1.5 0 0.5rem;
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    .location {
+      font-family: $text-font-family;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+  }
+
+  .partners {
+    background-color: $light-background;
+    background-image: url("../../images/sque-tile.png");
+    background-repeat: repeat;
+    color: $white;
+
+    .partners-container {
+      margin-top: 2em;
+      padding: 0 2em 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      text-align: center;
+      font-family: $text-font-family;
+      font-weight: 900;
+
+      div {
+        max-width: 400px;
+        min-width: 200px;
+        font-size: 2rem;
+        padding: 1em;
+
+        svg {
+          color: $site-orange;
+          font-size: 3rem;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .program {
+    color: $white;
+    text-align: center;
+    background-image: url("../../images/sque-tile.png");
+    background-repeat: repeat;
+    width: 100%;
+    min-height: 200px;
+
+    @include on-screen-type(tablet) {
+      padding: 0 10rem 2rem;
+    }
+
+    .program-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+
+      @include on-screen-type(tablet) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $light-background;
+        width: 100%;
+        padding: 1em;
+        margin: 0.2rem $margin;
+        min-width: 150px;
+
+        svg {
+          font-size: 2rem;
+        }
+
+        @include on-screen-type(tablet) {
+          flex-direction: column;
+          margin: 0.2rem;
+          min-height: 200px;
+        }
+
+        h6 {
+          color: $higlight-color;
+          font-family: $text-font-family;
+          padding: 1rem;
+        }
+
+        p {
+          font-family: $text-font-family;
+          text-align: center;
+        }
+
+        &:hover {
+          border: 1px solid $white;
+        }
+      }
+    }
+
+    button[type="button"] {
+      padding: 1.5rem 2.5rem;
+      background-color: $site-orange;
+      color: white;
+      border: none;
+
+      @include on-screen-type(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .speakers {
+    background: $white;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    .speaker-container {
+      display: grid;
+      margin-top: 1em;
+      grid-gap: 3rem;
+
+      @include on-screen-type(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 3rem;
+        grid-column-gap: 1rem;
+      }
+
+      article {
+        display: flex;
+        justify-content: space-between;
+        font-family: $text-font-family;
+        align-items: flex-start;
+        text-align: left;
+
+        figure {
+          float: left;
+          margin: 0 1rem;
+          max-width: 300px;
+
+          img {
+            width: 100%;
+            transform: rotate(-10deg);
+            transition: ease-in transform 0.5s;
+
+            &:hover {
+              transform: rotate(0deg);
+            }
+          }
+
+          &::after {
+            content: "";
+            clear: left;
+          }
+        }
+
+        h6:first-of-type {
+          font-family: $text-font-family;
+          font-weight: 400;
+        }
+
+        i {
+          color: $site-orange;
+          font-size: 0.8rem;
+        }
+
+        p:first-of-type {
+          margin-top: 1rem;
+          font-size: 0.8rem;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    button[type="button"] {
+      background-color: $white;
+      border: 1px solid $grey-border;
+      width: 100%;
+      padding: 0.5rem 0;
+      margin: 2rem auto;
+      text-transform: uppercase;
+
+      svg {
+        color: $site-orange;
+      }
+
+      @include on-screen-type(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+#schedule {
+  .schedule-table {
+    text-align: center;
+    max-width: 700px;
+    background-color: $white;
+    margin: auto;
+  }
+
+  .schedule-grid {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3em;
+
+    @include on-screen-type(tablet) {
+      grid-template-columns: 0.6fr 1fr;
+    }
+
+    .task {
+      background-color: #edf0f5;
+      padding: 2em 1em;
+
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      figure {
+        figcaption {
+          float: left;
+          margin-left: 1em;
+        }
+
+        figcaption::after {
+          content: "";
+          clear: left;
+        }
+
+        img {
+          float: left;
+          border-radius: 10%;
+          width: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+#about {
+  @include on-screen-type(tablet) {
+    text-align: center;
+
+    p {
+      max-width: 60%;
+      margin: auto;
+      display: block;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+
+  address {
+    font-family: $text-font-family;
+    margin: 1em auto;
+    text-align: center;
+    max-width: 60%;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    a {
+      display: block;
+      color: #000;
+      font-weight: 500;
+
+      &:active {
+        color: $site-orange;
+      }
+
+      &:hover {
+        color: $site-orange;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .history {
+    background-color: $white;
+    font-family: $text-font-family;
+    padding: 0 2em;
+    text-align: center;
+    margin: auto;
+    display: block;
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+      font-size: 4rem;
+      box-shadow: 10px 10px 10px $higlight-color;
+      transition: ease-in-out box-shadow 0.5s;
+
+      &:hover {
+        box-shadow: -10px -10px 10px $higlight-color;
+      }
+
+      svg {
+        color: $site-orange;
+      }
+    }
+  }
+
+  .past-event {
+    text-align: center;
+    background-color: $white;
+
+    p {
+      font-family: $text-font-family;
+      font-size: 0.7rem;
+    }
+
+    .event-container {
+      padding: 3em 1em;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1em;
+      text-align: left;
+      grid-template-rows: 200px;
+
+      @include on-screen-type(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3em 5em;
+      }
+
+      grid-row: 200px;
+
+      div {
+        background-color: $site-orange;
+        position: relative;
+        cursor: pointer;
+
+        .caption {
+          position: absolute;
+          background-color: transparent;
+          color: white;
+          text-align: center;
+          top: 4em;
+          left: 0;
+          right: 0;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-weight: 700;
+            font-size: 0.8rem;
+          }
+        }
+
+        img {
+          object-fit: cover;
+          opacity: 0.4;
+          width: 100%;
+          height: 200px;
+          transition: ease-in-out opacity 0.5s;
+
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#ticket {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2em;
+    text-align: left;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    line-height: 2;
+    padding-left: 50%;
+
+    input {
+      line-height: 2;
+    }
+  }
+
+  td::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    background-color: $higlight-color;
+    color: $white;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+
+  td:nth-of-type(1)::before {
+    content: "Ticket Name";
+  }
+
+  td:nth-of-type(2)::before {
+    content: "Price";
+  }
+
+  td:nth-of-type(3)::before {
+    content: "Date";
+  }
+
+  td:nth-of-type(4)::before {
+    content: "Quantity";
+  }
+
+  .ticket-selection {
+    background-color: $white;
+
+    button[type="button"] {
+      margin: 2rem 0;
+      padding: 1.5rem 2.5rem;
+      background-color: $site-orange;
+      color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  @include on-screen-type(tablet) {
+    .ticket-selection {
+      max-width: 70%;
+      margin: auto;
+    }
+
+    table {
+      display: table;
+
+      thead,
+      tbody {
+        display: table-header-group;
+
+        tr {
+          position: static;
+          display: table-row;
+        }
+      }
+
+      th,
+      td {
+        display: table-cell;
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+
+      th {
+        background: $higlight-color;
+        color: white;
+        font-weight: 700;
+      }
+
+      td:nth-of-type(1)::before {
+        content: "";
+      }
+
+      td:nth-of-type(2)::before {
+        content: "";
+      }
+
+      td:nth-of-type(3)::before {
+        content: "";
+      }
+
+      td:nth-of-type(4)::before {
+        content: "";
+      }
+    }
+  }
+}

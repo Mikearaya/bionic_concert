@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bionic: Ticket</title>
+    <link rel="stylesheet" href="../assets/style/css/css-reset.css" />
+    <link rel="stylesheet" href="../assets/style/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-button" style="display: none;" />
+      <section class="animate">
+        <h2 class="hidden">HIDDEN</h2>
+        <ul>
+          <li><a href="./about.html"> About </a></li>
+          <li><a href="./ticket.html">Ticket </a></li>
+          <li><a href="./schedule.html">Schedule </a></li>
+          <li><a href="#sponsors">Sponsor </a></li>
+        </ul>
+      </section>
+      <div class="menu-button">
+        <label for="menu-button"><i class="fas fa-bars"></i></label>
+      </div>
+
+      <div class="top-links">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li><a href="#"> English </a></li>
+          <li><a href="#"> My Page </a></li>
+          <li><a href="#"> Logout </a></li>
+        </ul>
+      </div>
+      <div class="bottom-nav">
+        <div class="right-nav">
+          <a href="../index.html" class="shallow-button">
+            <i class="fas fa-icons"></i>
+          </a>
+        </div>
+        <div class="left-nav">
+          <ul>
+            <li><a href="./about.html"> About </a></li>
+            <li><a href="./ticket.html">Ticket </a></li>
+            <li><a href="./schedule.html">Schedule </a></li>
+            <li><a href="#sponsors">Sponsor </a></li>
+          </ul>
+          <a href="./ticket.html" class="shallow-button">Book Ticket</a>
+        </div>
+      </div>
+    </nav>
+    <main id="ticket">
+      <section class="ticket-selection header">
+        <h2>Select your ticket</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ticket Name</th>
+              <th>Price</th>
+              <th>Date</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early-Bird</td>
+              <td>$200</td>
+              <td>2019-09-09</td>
+              <td><input type="number" /></td>
+            </tr>
+            <tr>
+              <td>Vip</td>
+              <td>$400</td>
+              <td>2019-09-09</td>
+              <td><input type="number" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button">Book ticket</button>
+      </section>
+
+      <section class="partners" id="sponsors">
+        <h2>Partners</h2>
+
+        <div class="partners-container">
+          <div>
+            <i class="fab fa-google"></i>
+            <span>Google</span>
+          </div>
+          <div>
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+          </div>
+          <div>
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </div>
+          <div>
+            <i class="fab fa-amazon"></i>
+            <span>Amazon</span>
+          </div>
+          <div>
+            <i class="fab fa-alipay"></i>
+            <span>AliPay</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <a href="../index.html">
+          <i class="fas fa-icons"></i>
+          Bionic Live
+        </a>
+      </div>
+      <div>
+        &copy; 2020 Creative Commons, Some Rights reserved
+      </div>
+    </footer>
+  </body>
+</html>
