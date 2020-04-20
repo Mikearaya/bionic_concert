@@ -59,7 +59,6 @@ button[type="button"] {
 .shallow-button {
   color: #ff4f38;
   border: 3px solid #ff4f38;
-  background-color: #fff;
   padding: 1em 0.5em;
   text-decoration: none;
 }
@@ -142,6 +141,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 8888;
+  background: #f7f7f7;
+  min-height: 4em;
 }
 @media only screen and (min-width: 768px) {
   nav {
@@ -156,7 +157,7 @@ nav .menu-button {
   left: 2rem;
   font-size: 3rem;
 }
-nav .menu-button:hover {
+nav .menu-button svg {
   cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
@@ -458,7 +459,7 @@ main .speakers .speaker-container article p:first-of-type {
 }
 main .speakers button[type="button"] {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d3d3d3;
   width: 100%;
   padding: 0.5rem 0;
   margin: 2rem auto;
