@@ -26,6 +26,7 @@ body {
   background-color: #f7f7f7;
   font-weight: 400;
   font-size: 16px;
+  overflow-x: hidden;
   background-image: url("../../images/main-background.png");
   background-repeat: no-repeat;
   background-size: cover;

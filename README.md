@@ -17,7 +17,13 @@ the website pages are categoriezed into 4 sections
 - ticket purchasing page
 - event schedule page
 
-![screenshot](./assets/images/screenshot.png)
+### Home Page Desktop View
+
+![screenshot](./assets/images/home_page_desktop.png)
+
+### Home page Mobile View
+
+![screenshot](./assets/images/mobile_view.png)
 
 ## Built With
 
@@ -64,6 +70,13 @@ enter the directory where you cloned or downloaded the project and open index.ht
 Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
+
+## Future Plan
+
+in the future i have a plan to incorporate javascript to make some of the sections more interactive such as:
+
+- mobile side bar is not hidding automatically when a link is selected
+- top navigation reponse to scroll event
 
 ## Show your support
 
