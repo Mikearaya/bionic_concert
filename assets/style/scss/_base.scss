@@ -19,17 +19,16 @@ $breakpoint-desktop: 768px;
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
   /* stylelint-disable */
-  src : url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
-  /* stylelint-enable */
-    format("embedded-opentype"),
+  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
+      /* stylelint-enable */ format("embedded-opentype"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
-    format("woff2"),
+      format("woff2"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
-    format("woff"),
+      format("woff"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
-    format("truetype"),
+      format("truetype"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
-    format("svg");
+      format("svg");
 }
 
 * {
@@ -44,5 +43,6 @@ body {
   font-size: 16px;
   background-image: url("../../images/main-background.png");
   background-repeat: no-repeat;
+  overflow-x: hidden;
   background-size: cover;
 }

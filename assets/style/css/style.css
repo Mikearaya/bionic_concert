@@ -1,13 +1,11 @@
 @import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
-/* stylelint-enable */
 @font-face {
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
   /* stylelint-disable */
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
       format("embedded-opentype"),
-    /* stylelint-enable */
-      url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
+    url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
       format("woff2"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
       format("woff"),
@@ -16,7 +14,6 @@
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
       format("svg");
 }
-
 * {
   box-sizing: border-box;
 }
@@ -29,6 +26,7 @@ body {
   font-size: 16px;
   background-image: url("../../images/main-background.png");
   background-repeat: no-repeat;
+  overflow-x: hidden;
   background-size: cover;
 }
 
@@ -65,7 +63,6 @@ button[type="button"] {
   padding: 1em 0.5em;
   text-decoration: none;
 }
-
 .shallow-button:hover {
   color: #fff;
   background-color: #ff4f38;
@@ -74,7 +71,6 @@ button[type="button"] {
 a[href*="index.html"].shallow-button {
   border: none;
 }
-
 a[href*="index.html"].shallow-button:hover {
   color: #3c3f46;
   background-color: #fff;
@@ -88,7 +84,6 @@ h2 {
   font-family: Lato, sans-serif;
   font-weight: 400;
 }
-
 h2::before {
   content: "";
   position: relative;
@@ -99,7 +94,6 @@ h2::before {
   height: 2px;
   margin: -1px auto;
 }
-
 @media only screen and (min-width: 768px) {
   h2 {
     max-width: 60%;
@@ -110,30 +104,24 @@ h2::before {
   from {
     right: -100px;
   }
-
   to {
     right: 0;
   }
 }
-
 .animate {
   display: none;
 }
-
 .animate ul {
   display: flex;
   flex-direction: column;
 }
-
 .animate ul li {
   padding: 2em;
   border: 1px solid #ff4f38;
 }
-
 .animate ul li:hover {
   background-color: #fff;
 }
-
 .animate ul a {
   color: #ff4f38;
 }
@@ -155,13 +143,11 @@ nav {
   top: 0;
   z-index: 8888;
 }
-
 @media only screen and (min-width: 768px) {
   nav {
     position: static;
   }
 }
-
 nav .menu-button {
   color: #636363;
   position: relative;
@@ -170,87 +156,70 @@ nav .menu-button {
   left: 2rem;
   font-size: 3rem;
 }
-
 nav .menu-button:hover {
   cursor: pointer;
 }
-
 @media only screen and (min-width: 768px) {
   nav .menu-button {
     display: none;
   }
 }
-
 nav div {
   display: none;
 }
-
 @media only screen and (min-width: 768px) {
   nav div {
     display: block;
   }
-
   nav div.top-links ul {
     background-color: #000;
     display: flex;
     justify-content: flex-end;
     padding-right: 5em;
   }
-
   nav div.top-links ul li {
     font-family: Lato, sans-serif;
     padding: 0.5em 1em;
   }
-
   nav div.top-links ul li a {
     color: #fff;
     text-decoration: none;
   }
-
   nav div.top-links ul li a:active {
     color: #ff4f38;
   }
-
   nav div.top-links ul li a:hover {
     color: #ff4f38;
   }
-
   nav div.bottom-nav {
     min-height: 10em;
     display: flex;
     justify-content: space-around;
     padding: 1em 2rem;
   }
-
   nav div.bottom-nav svg {
     font-size: 3rem;
   }
-
   nav div.bottom-nav ul {
     display: flex;
     justify-content: flex-end;
     padding-right: 5em;
   }
-
   nav div.bottom-nav ul li {
     font-family: Lato, sans-serif;
     padding: 0.5em 1em;
   }
-
   nav div.bottom-nav ul li a:first-of-type {
     color: #000;
     text-decoration: none;
   }
-
   nav div.bottom-nav ul li a:first-of-type:active {
     color: #ff4f38;
   }
-
   nav div.bottom-nav ul li a:first-of-type:hover {
     color: #ff4f38;
     text-decoration: underline;
   }
-
   nav div.bottom-nav .left-nav {
     display: flex;
     align-self: baseline;
@@ -267,25 +236,20 @@ footer {
   color: #000;
   min-height: 150px;
 }
-
 footer a[href*="index.html"] {
   color: #ff4f38;
 }
-
 footer a[href*="index.html"] svg {
   font-size: 4rem !important;
 }
-
 footer div {
   text-align: center;
 }
-
 @media only screen and (min-width: 768px) {
   footer {
     background-color: #3c3f46;
     color: #fff;
   }
-
   footer a {
     color: #fff;
     font-size: 2rem;
@@ -297,21 +261,18 @@ main {
   background-size: cover;
   margin-top: 1rem;
 }
-
 main .header {
   position: relative;
   text-align: center;
   padding: 1rem 2rem 4rem;
   opacity: 1;
 }
-
 main .header q {
   font-family: Lato, sans-serif;
   color: #ec5242;
   font-weight: 400;
   font-size: 2rem;
 }
-
 main .header h1 {
   margin-top: 1rem;
   color: #ec5242;
@@ -319,7 +280,6 @@ main .header h1 {
   font-size: 2rem;
   text-transform: uppercase;
 }
-
 main .header p {
   font-family: Lato, sans-serif;
   margin-top: 2rem;
@@ -331,30 +291,25 @@ main .header p {
   line-height: 1.5;
   display: inline-block;
 }
-
 main .header .large-text {
   font-size: 3em;
 }
-
 main .header time {
   margin: 1.5rem 0 0.5rem;
   display: block;
   font-size: 1.5rem;
 }
-
 main .header .location {
   font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
 }
-
 main .partners {
   background-color: #3c3f46;
   background-image: url("../../images/sque-tile.png");
   background-repeat: repeat;
   color: #fff;
 }
-
 main .partners .partners-container {
   margin-top: 2em;
   padding: 0 2em 2em;
@@ -366,23 +321,19 @@ main .partners .partners-container {
   font-family: Lato, sans-serif;
   font-weight: 900;
 }
-
 main .partners .partners-container div {
   max-width: 400px;
   min-width: 200px;
   font-size: 2rem;
   padding: 1em;
 }
-
 main .partners .partners-container div svg {
   color: #ff4f38;
   font-size: 3rem;
 }
-
 main .partners .partners-container div span {
   display: block;
 }
-
 main .program {
   color: #fff;
   text-align: center;
@@ -391,27 +342,23 @@ main .program {
   width: 100%;
   min-height: 200px;
 }
-
 @media only screen and (min-width: 768px) {
   main .program {
     padding: 0 10rem 2rem;
   }
 }
-
 main .program .program-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2em;
 }
-
 @media only screen and (min-width: 768px) {
   main .program .program-container {
     flex-direction: row;
     justify-content: center;
   }
 }
-
 main .program .program-container div {
   display: flex;
   justify-content: space-around;
@@ -422,11 +369,9 @@ main .program .program-container div {
   margin: 0.2rem 1rem;
   min-width: 150px;
 }
-
 main .program .program-container div svg {
   font-size: 2rem;
 }
-
 @media only screen and (min-width: 768px) {
   main .program .program-container div {
     flex-direction: column;
@@ -434,47 +379,39 @@ main .program .program-container div svg {
     min-height: 200px;
   }
 }
-
 main .program .program-container div h6 {
   color: #ec5242;
   font-family: Lato, sans-serif;
   padding: 1rem;
 }
-
 main .program .program-container div p {
   font-family: Lato, sans-serif;
   text-align: center;
 }
-
 main .program .program-container div:hover {
   border: 1px solid #fff;
 }
-
 main .program button[type="button"] {
   padding: 1.5rem 2.5rem;
   background-color: #ff4f38;
   color: white;
   border: none;
 }
-
 @media only screen and (min-width: 768px) {
   main .program button[type="button"] {
     display: none;
   }
 }
-
 main .speakers {
   background: #fff;
   padding: 3rem 1rem;
   text-align: center;
 }
-
 main .speakers .speaker-container {
   display: grid;
   margin-top: 1em;
   grid-gap: 3rem;
 }
-
 @media only screen and (min-width: 768px) {
   main .speakers .speaker-container {
     grid-template-columns: repeat(2, 1fr);
@@ -482,7 +419,6 @@ main .speakers .speaker-container {
     grid-column-gap: 1rem;
   }
 }
-
 main .speakers .speaker-container article {
   display: flex;
   justify-content: space-between;
@@ -490,44 +426,36 @@ main .speakers .speaker-container article {
   align-items: flex-start;
   text-align: left;
 }
-
 main .speakers .speaker-container article figure {
   float: left;
   margin: 0 1rem;
   max-width: 300px;
 }
-
 main .speakers .speaker-container article figure img {
   width: 100%;
   transform: rotate(-10deg);
   transition: ease-in transform 0.5s;
 }
-
 main .speakers .speaker-container article figure img:hover {
   transform: rotate(0deg);
 }
-
 main .speakers .speaker-container article figure::after {
   content: "";
   clear: left;
 }
-
 main .speakers .speaker-container article h6:first-of-type {
   font-family: Lato, sans-serif;
   font-weight: 400;
 }
-
 main .speakers .speaker-container article i {
   color: #ff4f38;
   font-size: 0.8rem;
 }
-
 main .speakers .speaker-container article p:first-of-type {
   margin-top: 1rem;
   font-size: 0.8rem;
   line-height: 1.5;
 }
-
 main .speakers button[type="button"] {
   background-color: #fff;
   border: 1px solid #e0e0e0;
@@ -536,11 +464,9 @@ main .speakers button[type="button"] {
   margin: 2rem auto;
   text-transform: uppercase;
 }
-
 main .speakers button[type="button"] svg {
   color: #ff4f38;
 }
-
 @media only screen and (min-width: 768px) {
   main .speakers button[type="button"] {
     display: none;
@@ -553,41 +479,34 @@ main .speakers button[type="button"] svg {
   background-color: #fff;
   margin: auto;
 }
-
 #schedule .schedule-grid {
   margin-top: 3em;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 3em;
 }
-
 @media only screen and (min-width: 768px) {
   #schedule .schedule-grid {
     grid-template-columns: 0.6fr 1fr;
   }
 }
-
 #schedule .schedule-grid .task {
   background-color: #edf0f5;
   padding: 2em 1em;
 }
-
 #schedule .schedule-grid .task article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 #schedule .schedule-grid .task figure figcaption {
   float: left;
   margin-left: 1em;
 }
-
 #schedule .schedule-grid .task figure figcaption::after {
   content: "";
   clear: left;
 }
-
 #schedule .schedule-grid .task figure img {
   float: left;
   border-radius: 10%;
@@ -599,18 +518,15 @@ main .speakers button[type="button"] svg {
   #about {
     text-align: center;
   }
-
   #about p {
     max-width: 60%;
     margin: auto;
     display: block;
   }
 }
-
 #about h2 {
   font-weight: 700;
 }
-
 #about address {
   font-family: Lato, sans-serif;
   margin: 1em auto;
@@ -620,22 +536,18 @@ main .speakers button[type="button"] svg {
   font-weight: 300;
   line-height: 1.5;
 }
-
 #about address a {
   display: block;
   color: #000;
   font-weight: 500;
 }
-
 #about address a:active {
   color: #ff4f38;
 }
-
 #about address a:hover {
   color: #ff4f38;
   text-decoration: underline;
 }
-
 #about .history {
   background-color: #fff;
   font-family: Lato, sans-serif;
@@ -644,7 +556,6 @@ main .speakers button[type="button"] svg {
   margin: auto;
   display: block;
 }
-
 #about .history .logo {
   display: inline-flex;
   align-items: center;
@@ -654,25 +565,20 @@ main .speakers button[type="button"] svg {
   box-shadow: 10px 10px 10px #ec5242;
   transition: ease-in-out box-shadow 0.5s;
 }
-
 #about .history .logo:hover {
   box-shadow: -10px -10px 10px #ec5242;
 }
-
 #about .history .logo svg {
   color: #ff4f38;
 }
-
 #about .past-event {
   text-align: center;
   background-color: #fff;
 }
-
 #about .past-event p {
   font-family: Lato, sans-serif;
   font-size: 0.7rem;
 }
-
 #about .past-event .event-container {
   padding: 3em 1em;
   display: grid;
@@ -682,20 +588,17 @@ main .speakers button[type="button"] svg {
   grid-template-rows: 200px;
   grid-row: 200px;
 }
-
 @media only screen and (min-width: 768px) {
   #about .past-event .event-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 3em 5em;
   }
 }
-
 #about .past-event .event-container div {
   background-color: #ff4f38;
   position: relative;
   cursor: pointer;
 }
-
 #about .past-event .event-container div .caption {
   position: absolute;
   background-color: transparent;
@@ -705,16 +608,13 @@ main .speakers button[type="button"] svg {
   left: 0;
   right: 0;
 }
-
 #about .past-event .event-container div .caption h3 {
   font-size: 1.5rem;
 }
-
 #about .past-event .event-container div .caption p {
   font-weight: 700;
   font-size: 0.8rem;
 }
-
 #about .past-event .event-container div img {
   object-fit: cover;
   opacity: 0.4;
@@ -722,7 +622,6 @@ main .speakers button[type="button"] svg {
   height: 200px;
   transition: ease-in-out opacity 0.5s;
 }
-
 #about .past-event .event-container div img:hover {
   opacity: 0;
 }
@@ -733,7 +632,6 @@ main .speakers button[type="button"] svg {
   margin-top: 2em;
   text-align: left;
 }
-
 #ticket table,
 #ticket thead,
 #ticket tbody,
@@ -742,28 +640,23 @@ main .speakers button[type="button"] svg {
 #ticket tr {
   display: block;
 }
-
 #ticket tr {
   border: 1px solid #ccc;
 }
-
 #ticket thead tr {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-
 #ticket td {
   border: none;
   position: relative;
   line-height: 2;
   padding-left: 50%;
 }
-
 #ticket td input {
   line-height: 2;
 }
-
 #ticket td::before {
   position: absolute;
   top: 0;
@@ -774,31 +667,24 @@ main .speakers button[type="button"] svg {
   background-color: #ec5242;
   color: #fff;
 }
-
 #ticket tr:nth-of-type(odd) {
   background: #eee;
 }
-
 #ticket td:nth-of-type(1)::before {
   content: "Ticket Name";
 }
-
 #ticket td:nth-of-type(2)::before {
   content: "Price";
 }
-
 #ticket td:nth-of-type(3)::before {
   content: "Date";
 }
-
 #ticket td:nth-of-type(4)::before {
   content: "Quantity";
 }
-
 #ticket .ticket-selection {
   background-color: #fff;
 }
-
 #ticket .ticket-selection button[type="button"] {
   margin: 2rem 0;
   padding: 1.5rem 2.5rem;
@@ -808,28 +694,23 @@ main .speakers button[type="button"] svg {
   text-transform: uppercase;
   font-weight: 700;
 }
-
 @media only screen and (min-width: 768px) {
   #ticket .ticket-selection {
     max-width: 70%;
     margin: auto;
   }
-
   #ticket table {
     display: table;
   }
-
   #ticket table thead,
   #ticket table tbody {
     display: table-header-group;
   }
-
   #ticket table thead tr,
   #ticket table tbody tr {
     position: static;
     display: table-row;
   }
-
   #ticket table th,
   #ticket table td {
     display: table-cell;
@@ -837,25 +718,20 @@ main .speakers button[type="button"] svg {
     border: 1px solid #ccc;
     text-align: left;
   }
-
   #ticket table th {
     background: #ec5242;
     color: white;
     font-weight: 700;
   }
-
   #ticket table td:nth-of-type(1)::before {
     content: "";
   }
-
   #ticket table td:nth-of-type(2)::before {
     content: "";
   }
-
   #ticket table td:nth-of-type(3)::before {
     content: "";
   }
-
   #ticket table td:nth-of-type(4)::before {
     content: "";
   }
