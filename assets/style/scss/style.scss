@@ -127,6 +127,7 @@ nav {
 
   @include on-screen-type(tablet) {
     position: static;
+    background-color: transparent;
   }
 
   .menu-button {
