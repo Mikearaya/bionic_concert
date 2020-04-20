@@ -21,7 +21,7 @@
     }
   },
   "lint-staged": {
-    "assets/**/*.css": [
+    "assets/**/*.{css|scss}": [
       "npx stylelint --fix"
     ],
     "index.html": [

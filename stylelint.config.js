@@ -10,6 +10,8 @@ module.exports = {
         ignore: ["after-comment"],
       },
     ],
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
@@ -106,10 +108,5 @@ module.exports = {
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
   },
-  ignoreFiles: [
-    "**/**/*.json",
-    "./assets/images/**",
-    "./assets/fonts/**",
-    "./assets/style/scss/**",
-  ],
+  ignoreFiles: ["**/**/*.json", "./assets/images/**", "./assets/fonts/**"],
 };
