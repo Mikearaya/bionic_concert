@@ -25,10 +25,14 @@ the website pages are categoriezed into 4 sections
 
 ![screenshot](./assets/images/mobile_view.png)
 
+# Preview Video
+
+[Preview Video Link](https://www.loom.com/share/61b110695db64ad7af6e77b85c09c7fb)
+
 ## Built With
 
 - HTML
-- CSS
+- SCSS
 
 ## Live Demo
 
