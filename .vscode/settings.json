@@ -1,3 +1,5 @@
 {
-    "intelephense.format.enable": false
+  "intelephense.format.enable": false,
+  "editor.codeActionsOnSave": null,
+  "editor.formatOnSave": true
 }
