@@ -1,17 +1,17 @@
 @import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
+
 @font-face {
   font-family: "COCOGOOSE";
   src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot");
-  src: url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix")
-      format("embedded-opentype"),
+  src:url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix") format("embedded-opentype"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff2")
-      format("woff2"),
+    format("woff2"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.woff")
-      format("woff"),
+    format("woff"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.ttf")
-      format("truetype"),
+    format("truetype"),
     url("//db.onlinewebfonts.com/t/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE")
-      format("svg");
+    format("svg");
 }
 
 * {
@@ -761,7 +761,7 @@ main .speakers button[type="button"] svg {
   line-height: 2;
 }
 
-#ticket td:before {
+#ticket td::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -776,19 +776,19 @@ main .speakers button[type="button"] svg {
   background: #eee;
 }
 
-#ticket td:nth-of-type(1):before {
+#ticket td:nth-of-type(1)::before {
   content: "Ticket Name";
 }
 
-#ticket td:nth-of-type(2):before {
+#ticket td:nth-of-type(2)::before {
   content: "Price";
 }
 
-#ticket td:nth-of-type(3):before {
+#ticket td:nth-of-type(3)::before {
   content: "Date";
 }
 
-#ticket td:nth-of-type(4):before {
+#ticket td:nth-of-type(4)::before {
   content: "Quantity";
 }
 
@@ -841,19 +841,19 @@ main .speakers button[type="button"] svg {
     font-weight: 700;
   }
 
-  #ticket table td:nth-of-type(1):before {
+  #ticket table td:nth-of-type(1)::before {
     content: "";
   }
 
-  #ticket table td:nth-of-type(2):before {
+  #ticket table td:nth-of-type(2)::before {
     content: "";
   }
 
-  #ticket table td:nth-of-type(3):before {
+  #ticket table td:nth-of-type(3)::before {
     content: "";
   }
 
-  #ticket table td:nth-of-type(4):before {
+  #ticket table td:nth-of-type(4)::before {
     content: "";
   }
 }
