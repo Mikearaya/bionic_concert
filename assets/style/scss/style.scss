@@ -1,3 +1,4 @@
+
 @import "responsive";
 @import "base";
 
@@ -33,6 +34,7 @@ button[type="button"] {
   background-color: $white;
   padding: 1em 0.5em;
   text-decoration: none;
+
   &:hover {
     color: $white;
     background-color: $site-orange;
@@ -58,7 +60,6 @@ h2 {
 
   &::before {
     content: "";
-
     position: relative;
     top: 40px;
     display: block;
@@ -161,7 +162,7 @@ nav {
           li {
             font-family: $text-font-family;
             padding: 0.5em 1em;
-            
+
             a {
               color: $white;
               text-decoration: none;
@@ -234,7 +235,7 @@ footer {
 
   a[href*="index.html"] {
     color: $site-orange;
-    
+
     svg {
       font-size: 4rem !important;
     }
@@ -422,9 +423,6 @@ main {
     padding: 3rem 1rem;
     text-align: center;
 
-    @include on-screen-type(tablet) {
-    }
-
     .speaker-container {
       display: grid;
       margin-top: 1em;
@@ -522,6 +520,7 @@ main {
     .task {
       background-color: #edf0f5;
       padding: 2em 1em;
+
       article {
         display: flex;
         flex-direction: column;
@@ -719,7 +718,7 @@ main {
     }
   }
 
-  td:before {
+  td::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -734,24 +733,25 @@ main {
     background: #eee;
   }
 
-  td:nth-of-type(1):before {
+  td:nth-of-type(1)::before {
     content: "Ticket Name";
   }
 
-  td:nth-of-type(2):before {
+  td:nth-of-type(2)::before {
     content: "Price";
   }
 
-  td:nth-of-type(3):before {
+  td:nth-of-type(3)::before {
     content: "Date";
   }
 
-  td:nth-of-type(4):before {
+  td:nth-of-type(4)::before {
     content: "Quantity";
   }
 
   .ticket-selection {
     background-color: $white;
+
     button[type="button"] {
       margin: 2rem 0;
       padding: 1.5rem 2.5rem;
@@ -771,6 +771,7 @@ main {
 
     table {
       display: table;
+
       thead,
       tbody {
         display: table-header-group;
@@ -795,19 +796,19 @@ main {
         font-weight: 700;
       }
 
-      td:nth-of-type(1):before {
+      td:nth-of-type(1)::before {
         content: "";
       }
 
-      td:nth-of-type(2):before {
+      td:nth-of-type(2)::before {
         content: "";
       }
 
-      td:nth-of-type(3):before {
+      td:nth-of-type(3)::before {
         content: "";
       }
 
-      td:nth-of-type(4):before {
+      td:nth-of-type(4)::before {
         content: "";
       }
     }
