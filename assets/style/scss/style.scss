@@ -123,7 +123,7 @@ nav {
   top: 0;
   z-index: 8888;
   background: $background-color;
-  min-height: 4em;
+  min-height: 3em;
 
   @include on-screen-type(tablet) {
     position: static;
@@ -132,10 +132,10 @@ nav {
   .menu-button {
     color: #636363;
     position: relative;
-    top: 1rem;
+    top: 0.5rem;
     display: block;
-    left: 2rem;
-    font-size: 3rem;
+    left: 1.5rem;
+    font-size: 2.5rem;
 
     svg {
       cursor: pointer;
