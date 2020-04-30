@@ -2,4 +2,5 @@
 *.css eol=lf
 *.json eol=lf
 *.sol eol=lf
+*.scss linguist-detectable=true
 *.scss linguist-language=SCSS
