@@ -1,8 +1,8 @@
 # Bionic Live Rap Concert Website
 
-##[HTML & CSS Capstone]
+## [HTML & CSS]
 
-this website was created for my HTML & CSS capstone Microverse project. in this project i have create concert website with all it's responsive features to support mobile, tablet and desktop view using CSS media queries. the website provides feature to it's users such as :
+In this project i have create concert website with all it's responsive features to support mobile, tablet and desktop view using CSS media queries. the website provides feature to it's users such as :
 
 - purchase ticket
 - view general information about the event.
